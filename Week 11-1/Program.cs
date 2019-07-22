@@ -6,8 +6,11 @@ using System.Windows.Forms;
 
 namespace Week_11_1
 {
-    static class Program
+    public static class Program
     {
+        public static StartForm startform;
+        public static MainForm mainform;
+        public static AboutForm aboutform;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +19,12 @@ namespace Week_11_1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            startform = new StartForm();
+            mainform = new MainForm();
+            aboutform = new AboutForm();
+
+            Application.Run(startform);
         }
     }
 }
